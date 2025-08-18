@@ -22,8 +22,7 @@
 }
 nav{
   position: fixed;
-  width: 100%;
-  padding: 20px 0;
+  width: 100%;  
   z-index: 998;
   transition: all 0.3s ease;
   font-family: 'Ubuntu', sans-serif;
@@ -39,12 +38,17 @@ nav .navbar{
   align-items: center;
   margin: auto;
 }
-nav .navbar .logo a{
+nav .navbar .logo a img{
+  display: block;  
   font-weight: 500;
   font-size: 35px;
   color: #4070f4;
+  max-height: 50px; 
+  width: auto;      
+  height: auto;     
+  transition: 0.3s ease;
 }
-nav.sticky .navbar .logo a{
+nav.sticky .navbar .logo a img{
   color: #fff;
 }
 nav .navbar .menu{
@@ -56,10 +60,10 @@ nav .navbar .menu li{
   margin: 0 8px;
 }
 .navbar .menu a{
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   color: white;
-  padding: 6px 0;
+  padding: 6px 6px;
   transition: all 0.4s ease;
 }
 .navbar .menu a:hover{
@@ -410,11 +414,12 @@ section .button button:hover{
   .navbar.active .menu{
     left: 0;
   }
-  nav .navbar .menu a{
-    font-size: 23px;
-    display: block;
+  nav .navbar .menu a{    
     color: #fff;
-    margin: 10px 0;
+    font-size: 18px;        
+    text-decoration: none;  
+    padding: 10px 15px;     
+    transition: 0.3s ease;  
   }
   nav.sticky .menu a:hover{
     color: #4766bb;
