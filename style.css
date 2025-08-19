@@ -177,6 +177,7 @@ section .title{
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
+  margin-top: 60px;
 }
 section .title span{
   color: #0E2431;
@@ -202,16 +203,13 @@ section .title span::after{
   transform: translateX(-50%);
 }
 .about .about-details .left{
-  width: 45%;
+  width: 100%;
 }
 .about .left img{
   height: 400px;
   width: 400px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-.about-details .right{
-  width: 55%;
+  padding-right: 40px;
+  object-fit: cover;  
 }
 section  .topic{
   color: #0E2431;
@@ -247,7 +245,7 @@ section .button button:hover{
     background: #F0F8FF;
   }
   .skills .content{
-    padding: 40px 0;
+    padding: 20px 0;
   }
   .skills .skills-details{
     display: flex;
@@ -278,13 +276,13 @@ section .button button:hover{
    margin: 0 6px;
  }
  .skills-details .boxes{
-   width: 45%;
+   width: 100%;
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
  }
  .skills-details .box{
-   width: calc(100% / 2 - 20px);
+   width: calc(100% / 4 - 20px);
    margin: 20px 0;
  }
  .skills-details .boxes .topic{
@@ -470,4 +468,7 @@ section .button button:hover{
     font-size: 50px;
     color: #4070f4;
   }
+}
+.skills{
+  height: 70px;
 }
