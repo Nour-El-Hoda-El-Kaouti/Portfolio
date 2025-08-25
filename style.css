@@ -57,7 +57,8 @@ nav .navbar .menu{
 }
 nav .navbar .menu li{
   list-style: none;
-  margin: 0 8px;
+  margin: 8px;
+  border-bottom: none;
 }
 .navbar .menu a{
   font-size: 20px;
@@ -67,7 +68,7 @@ nav .navbar .menu li{
   transition: all 0.4s ease;
 }
 .navbar .menu a:hover{
-  color: #4070f4;
+  color: #0E2431;
 }
 nav.sticky .menu a{
   color: #FFF;
@@ -79,6 +80,12 @@ nav.sticky .menu a:hover{
   color: #4070f4;
   font-size: 18px;
   margin: 0 6px;
+}
+.theme-toggle i{
+  color: #f2f2f3;
+}
+nav.sticky .theme-toggle i{
+    color: #FFF;
 }
 nav.sticky .media-icons a{
   color: #FFF;
@@ -208,8 +215,8 @@ section .title span::after{
 .about .left img{
   height: 400px;
   width: 400px;
-  padding-right: 40px;
   object-fit: cover;  
+  padding-right: 40px;  
 }
 section  .topic{
   color: #0E2431;
@@ -390,6 +397,8 @@ section .button button:hover{
   .about .left img{
     height: 350px;
     width: 350px;
+    border-radius: 18px;
+    padding-right: 0;
   }
 }
 @media (max-width: 750px) {
@@ -400,27 +409,26 @@ section .button button:hover{
     position: fixed;
     left: -100%;
     top: 0;
-    background: #0E2431;
+    background: #096194;
     height: 100vh;
-    max-width: 400px;
+    max-width: 260px;
     width: 100%;
     padding-top: 60px;
     flex-direction: column;
-    align-items: center;
+    align-items: baseline;
     transition: all 0.5s ease;
   }
   .navbar.active .menu{
     left: 0;
   }
   nav .navbar .menu a{    
-    color: #fff;
-    font-size: 18px;        
+    color: #fff;         
     text-decoration: none;  
-    padding: 10px 15px;     
+    padding: 10px 20px;     
     transition: 0.3s ease;  
   }
   nav.sticky .menu a:hover{
-    color: #4766bb;
+    color: #090f20;
   }
   nav .navbar .media-icons{
     display: none;
@@ -444,8 +452,7 @@ section .button button:hover{
     width: 100%;
     margin-bottom: 50px;
   }
-  .skills-details .boxes{
-    justify-content: center;
+  .skills-details .boxes{    
     align-items: center;
     width: 100%;
   }
@@ -471,4 +478,186 @@ section .button button:hover{
 }
 .skills{
   height: 70px;
+}
+/* Styles pour le bouton de basculement thème - Desktop */
+.theme-toggle-container {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  background: rgba(64, 112, 244, 0.1);
+}
+
+.theme-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+nav.sticky .theme-toggle {
+  border-color: #fff;
+}
+
+nav.sticky .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Styles pour le bouton dark/light dans le menu mobile */
+.theme-mobile-item {
+  display: none; /* Caché par défaut */
+}
+
+.theme-toggle-container-mobile {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+.theme-toggle-container-mobile .theme-toggle {
+  width: auto;
+  height: auto;
+  padding: 10px 15px;
+  border-radius: 25px;
+  background: rgba(64, 112, 244, 0.1);
+  color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.theme-toggle-container-mobile .theme-toggle .theme-icon {
+  margin-right: 8px;
+}
+
+/* Media query pour mobile */
+@media (max-width: 750px) {
+  /* Cacher le bouton desktop en mode mobile */
+  .theme-toggle-container {
+    display: none;
+  }
+    
+  .theme-mobile-item {
+    display: block;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.877);
+    padding-top: 20px;
+  }
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --secondary-bg: #2d2d2d;
+  --secondary-text: #adb5bd;
+  --accent-color: #6e93f7;
+  --border-color: #495057;
+  --sidebar-color: #507bf3dc;
+}
+
+[data-theme="dark"] body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] nav.sticky {
+  background: var(--accent-color);
+}
+
+[data-theme="dark"] .text .text-one {
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] .text-two >:nth-child(-n+2) {
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] .text-three {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .text-four {
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] .navbar .menu a {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] nav .navbar .menu {
+  background-color: var(--sidebar-color);
+}
+
+[data-theme="dark"] .navbar .menu a:hover {
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] section .title span {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] section .title span::before,
+[data-theme="dark"] section .title span::after {
+  background: var(--accent-color);
+}
+
+[data-theme="dark"] section .topic {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .about-details .right p {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .skills {
+  background: var(--secondary-bg);
+}
+
+[data-theme="dark"] .skills-details p,
+[data-theme="dark"] .skills-details .experience .num,
+[data-theme="dark"] .skills-details .experience .exp {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .services .boxes .box {
+  background: var(--secondary-bg);
+  color: var(--text-color);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .services .boxes .box:hover {
+  background: var(--accent-color);
+}
+
+[data-theme="dark"] .services .boxes .box:hover .topic,
+[data-theme="dark"] .services .boxes .box:hover p {
+  color: var(--text-color);
+}
+
+[data-theme="dark"] .contact {
+  background: var(--secondary-bg);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--secondary-bg);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+}
+
+[data-theme="dark"] .theme-toggle {
+  border-color: var(--text-color);
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Nour El Hoda El Kaouti| PortFolio</title>
     <link rel="stylesheet" href="style.css" />    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>    
@@ -19,12 +19,21 @@
           </a>      
         </div>    
         <ul class="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Experiences</a></li> 
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li> 
-          <li><a href="#skills">Skills</a></li>    
+          <li><a href="#home"><i class="fa-solid fa-house" style="padding-right: 10px;"></i>Home</a></li>
+          <li><a href="#about"><i class="fa-solid fa-person-dress" style="padding-right: 16px;padding-left: 5px;"></i>About</a></li>
+          <li><a href="#services"><i class="fa-solid fa-landmark" style="padding-right: 13px;"></i>Experiences</a></li> 
+          <li><a href="#education"><i class="fa-solid fa-graduation-cap" style="padding-right: 10px;"></i>Education</a></li>
+          <li><a href="#projects"><i class="fa-solid fa-sheet-plastic" style="padding-right: 10px;"></i>Projects</a></li> 
+          <li><a href="#skills"><i class="fa-solid fa-ranking-star" style="padding-right: 10px;"></i>Skills</a></li> 
+          <li>
+            <div class="theme-mobile-item">
+              <div class="theme-toggle-container-mobile">
+                <button id="themeToggleMobile" class="theme-toggle" aria-label="Changer le mode sombre/clair">
+                  <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
+                </button>
+              </div>
+            </div>
+          </li>                   
           <div class="cancel-btn">
             <i class="fas fa-times"></i>
           </div>                  
@@ -35,11 +44,17 @@
           <a href="https://github.com/Nour-El-Hoda-El-Kaouti"><i class="fab fa-github"></i></a>
           <a href="https://gitlab.com/elkaoutinour"><i class="fab fa-gitlab"></i></a>
         </div>
+        <!-- Ajout du bouton dark/light pour le desktop -->
+        <div class="theme-toggle-container">
+          <button id="themeToggle" class="theme-toggle" aria-label="Changer le mode sombre/clair">
+            <span class="theme-icon"><i class="fa-solid fa-moon"></i></span>
+          </button>
+        </div>
       </div>
       <div class="menu-btn">
         <i class="fas fa-bars"></i>
       </div>
-    </nav>    
+    </nav>   
     <section class="home" id="home">
       <div class="home-content">
         <div class="text">
@@ -198,7 +213,7 @@
                 <div class="topic"><img class="skills" src="https://img.icons8.com/?size=100&id=13679&format=png&color=000000" alt=""></div>              
             </div>
             <div class="box">
-                <div class="topic"><img class="skills" src="https://skywardit.com/wp-content/uploads/2023/07/octopus-devops-infinity.png" alt=""></div>                                        
+                <div class="topic"><img class="skills" style="height: 37px;" src="https://static.vecteezy.com/system/resources/thumbnails/002/258/274/small_2x/devops-symbol-mobius-ribbon-software-development-and-information-technology-operations-vector.jpg" alt=""></div>                                        
             </div>
             <div class="box">
                 <div class="topic"><img class="skills" src="https://img.icons8.com/?size=100&id=40669&format=png&color=000000" alt=""></div>                                                        
@@ -207,13 +222,13 @@
                 <div class="topic"><img class="skills" src="https://www.clipartkey.com/mpngs/m/162-1629407_uml-png.png" alt=""></div>                                                                      
             </div>
             <div class="box">
-                <div class="topic"><img class="skills" style="height: 80px;" src="https://www.svgrepo.com/download/354365/sonarqube.svg" alt=""></div>                                                        
+                <div class="topic"><img class="skills"  src="https://www.svgrepo.com/download/354365/sonarqube.svg" alt=""></div>                                                        
             </div>
             <div class="box">
                 <div class="topic"><img class="skills" src="https://img.icons8.com/?size=100&id=39292&format=png&color=000000" alt=""></div>                                                        
             </div>
             <div class="box">              
-                <div class="topic"><img class="skills" style="height: 80px;" src="http://images.vogel.de/vogelonline/bdb/745100/745116/4.jpg" alt=""></div>                                                        
+                <div class="topic"><img class="skills"  src="http://images.vogel.de/vogelonline/bdb/745100/745116/4.jpg" alt=""></div>                                                        
             </div>
             <div class="box">
                 <div class="topic"><img class="skills" src="https://img.icons8.com/?size=100&id=iGCCE2iEmh2u&format=png&color=000000" alt=""></div>                                                        
@@ -231,10 +246,10 @@
                 <div class="topic"><img class="skills" src="https://img.icons8.com/?size=100&id=laYYF3dV0Iew&format=png&color=000000" alt=""></div>                                                        
             </div>                               
             <div class="box">
-                <div class="topic"><img class="skills" style="height: 100px;" src="https://img.icons8.com/?size=100&id=TMZAZMLFozcL&format=png&color=000000" alt=""></div>                                                        
+                <div class="topic"><img class="skills" src="https://img.icons8.com/?size=100&id=TMZAZMLFozcL&format=png&color=000000" alt=""></div>                                                        
             </div>
             <div class="box">              
-                <div class="topic"><img class="skills" style="height: 100px;" src="https://cms-informatic.com/wp-content/uploads/2020/01/logo-langage-C-830x830.png" alt=""></div>                                                                     
+                <div class="topic"><img class="skills" src="https://cms-informatic.com/wp-content/uploads/2020/01/logo-langage-C-830x830.png" alt=""></div>                                                                     
             </div>            
 
           </div>
